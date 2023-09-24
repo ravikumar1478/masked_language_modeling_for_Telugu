@@ -51,35 +51,42 @@ check that words with the actual words and evaluated
 
 ## Training procedure
 
-Step-1: Collecting Data
+#### Step-1: 
+Collecting Data
 From the Kaggle Telugu dataset is collected. It contains Telugu paragraphs from 
 different books.
 
-Step-2: Pre-processing Data
+#### Step-2: 
+Pre-processing Data
 The collected data is pre-processed using different pre-processing techniques 
 and splitting the large Telugu Sentence into small sentences.
 
-Step-3: Connecting to Hugging Face
+#### Step-3: 
+Connecting to Hugging Face
 Hugging Face provides a token with which we can log in using a notebook 
 function and the rest of the work we do will be exported to the platform 
 automatically.
 
-Step-4: Loading pre-trained model and tokenizer
+#### Step-4: 
+Loading pre-trained model and tokenizer
 The pre-trained model and tokenizer from xlm-roberta-base are loaded for 
 training our Telugu data
 
-Step-5: Training the model
+#### Step-5: 
+Training the model
 Required libraries like Trainer and Training arguments are imported from 
 Transformers library. The after giving the Training arguments with our data we 
 train the model using the train() method which takes 1 to 1 ½ hours depending upon 
 the size of our input data
 
-Step-6: Pushing model and tokenizer 
+#### Step-6: 
+Pushing model and tokenizer 
 Then trainer.push_to_hub() and tokenizer.push_to_hub() methods are used to 
 export our trained model and its tokenizers which are used for the mapping of 
 words in prediction. 
 
-Step-7: Testing
+#### Step-7: 
+Testing
 In the hugging face after opening our model page there is an API in which We 
 give a Telugu Sentence as input with <mask> keyword and click the compute
 button then the predicted words with their probabilities are displayed. Then we 
